@@ -1,0 +1,163 @@
+:root{
+  --btn-color: #FF9800;
+}
+
+* {
+  margin: 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #E8F5E9;
+  color: black;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.generatorContainer {
+  margin: 10px;
+  background-color: #434444;
+  color: beige;
+  box-sizing: border-box;
+  box-shadow: black 0px 0px 10px;
+  padding: 1em;
+  border-radius: 20px;
+  height: 95%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30pt;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputs > div:nth-child(1) {
+  width: 70%;
+}
+
+.newName {
+  width: 90%;
+  font-size: 12pt;
+  border-radius: 5px 0px 0px 5px;
+  padding: 0.33em;
+  border: none;
+}
+
+.addbtn {
+  padding: 1em;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  background-color: var(--btn-color);
+  color:white;
+  font-weight: bold;
+}
+
+.addMember {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs > div:nth-child(2) {
+  width: 25%;
+}
+
+.addingButton {
+  display: flex;
+}
+
+.addingTeams {
+  display: flex;
+}
+
+.amountTeams {
+  text-align: center;
+  border: none;
+  width: 40%;
+  font-weight: bold;
+}
+
+.plus,
+.minus {
+  background-color: var(--btn-color);
+  color: beige;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7em 1em;
+  font-weight: bold;
+}
+
+
+
+.waitinglist {
+  margin-top: 0.5em;
+  background-color: white;
+  height: 70%;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+
+.lastButtons {
+  margin-top: 1em;
+  display: flex;
+  gap: 10px;
+}
+
+.assignBtn {
+  background-color: var(--btn-color);
+  color: beige;
+  font-weight: bold;
+  font-size: 14pt;
+  border: none;
+  padding: 0.5em 3.5em 0.5em 3.5em;
+  border-radius: 5px;
+  flex-grow: 2;
+}
+
+.resetBtn {
+  background-color: tomato;
+  color: beige;
+  font-weight: bold;
+  font-size: 14pt;
+  border: none;
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+
+
+.teams{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 50%;
+  padding: 1em;
+}
+
+.teamCard{
+  width: 30%;
+  height: 30%;
+}
+
+.bodyCard {
+  background-color: #434444;
+  color: beige;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: black 0px 0px 15px;
+  padding: 1em;
+}
