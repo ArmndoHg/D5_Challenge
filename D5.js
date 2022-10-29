@@ -18,7 +18,7 @@ const clear = function(){
 addbtn.addEventListener('click', addingName, clear)
 
 
-    //---------SELECTING TEAMS----------//
+    //---------SELECTING TEAM----------//
 
 let minusBtn = document.querySelector('.minus')
 let plusBtn = document.querySelector('.plus')
@@ -28,24 +28,50 @@ let count = 0;
 teamInput.value = count;
 teamInput.innerText = teamInput.value;
 
-//------------INCREASE TEAMS------------//
+//------------INCREASE TEAM------------//
 
-const plusingTeams = function() {
+const plusingTeam = function() {
     count++;
     teamInput.value = count;
     teamInput.innerText = teamInput.value;
+    addingTeam ();
     return;
 }
 
-plusBtn.addEventListener("click", plusingTeams);
+plusBtn.addEventListener("click", plusingTeam);
 
-//------------DECREASE TEAMS------------//
+//------------DECREASE TEAM------------//
 
-const restingTeams = function(){
+const restingTeam = function(){
     count--;
     teamInput.value = count;
     teamInput.innerText = teamInput.value;
+    removingTeam ();
     return;
 }
 
-minusBtn.addEventListener('click',restingTeams);
+minusBtn.addEventListener('click',restingTeam);
+
+//--------------ADDING TEAM------------//
+
+let teams = document.querySelector('.teams');
+
+const addingTeam = function () {
+  const teamCard = document.createElement("div");
+  const h2 = document.createElement("h2");
+  const bodyCard = document.createElement("div");
+
+  teamCard.classList.add("teamCard");
+  h2.innerText = `Team ${count}`;
+  bodyCard.classList.add("bodyCard");
+  
+  teams.appendChild(teamCard);
+  teamCard.appendChild(h2);
+  teamCard.appendChild(bodyCard);
+};
+
+//------------REMOVING TEAM-----------//
+
+const removingTeam = function (){
+  teams.removeChild(teams.lastElementChild);
+};
